@@ -1,0 +1,188 @@
+
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body {
+	width:960px; margin: 0 auto;
+	background: white;
+	background-image: url(../images/bg.png);
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+	padding: 20px 20px 10px;
+	background:white;
+}
+
+#header {
+	background-color: white;
+	height:150px;
+}
+
+#userlogin {
+	float:right;
+	overflow: hidden
+}
+
+#userlogin input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #999;
+	height: 30px;
+	width: 140px;
+	margin: 0 10px;
+	background-image: linear-gradient(bottom, #D9D9D9 1%, #FCFCFC 51%);
+	background-image: -o-linear-gradient(bottom, #D9D9D9 1%, #FCFCFC 51%);
+	background-image: -moz-linear-gradient(bottom, #D9D9D9 1%, #FCFCFC 51%);
+	background-image: -webkit-linear-gradient(bottom, #D9D9D9 1%, #FCFCFC 51%);
+	background-image: -ms-linear-gradient(bottom, #D9D9D9 1%, #FCFCFC 51%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, #D9D9D9),
+		color-stop(0.51, #FCFCFC)
+	);
+	padding-left: 10px;
+}
+
+#userlogin input[type='submit'] {
+	width: 50px;
+}
+
+#logo {
+	background-image:url(../images/GRHead.png);
+	height: 86px;
+	width: 300px;
+	float: left;
+	clear:both;
+}
+
+nav ul {
+	list-style-type: none;
+	margin-top: 80px;
+}
+
+nav li {
+	float:right;
+	display: inline-block;
+	
+}
+
+nav a{
+	display: block;
+	width: 155px;
+	height:45px;
+	margin: 0 20px 10px;
+	color: white;
+	background-color: #D83E3E;
+	text-align: center;
+	line-height: 45px;
+	font-size: 26px;
+	text-decoration: none;
+
+}
+
+#navlast {
+	margin-right: -10px;
+}
+
+#container {
+	width: 960px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
