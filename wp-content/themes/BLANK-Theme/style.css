@@ -1,0 +1,314 @@
+/*   
+Theme Name: Gamerreview
+Theme URI: http://gamerreview.com
+Description: Theme designed solely for use on the Gamerreview websit.
+Author: David Walker
+Version: 1
+*/
+
+
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body {
+	width:960px; margin: 0 auto;
+	background: white;
+	background-image: url(images/bg.png);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+header {
+	padding: 20px 20px 10px;
+	background: white;
+	overflow: hidden;
+}
+
+#form-container {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	box-shadow: 1px 1px 2px #888888 inset;
+	background: white;
+	height: 40px;
+	width: 260px;
+	margin: 10px 20px;
+	float: right;
+}
+
+#searchform input[type='text'] {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: white;
+	height: 20px;
+	width: 210px;
+	margin: 10px 10px;
+	float: left;
+	box-shadow: none;
+	border: none;
+}
+
+#searchform .button {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+
+}
+
+h1 {
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 20px;
+}
+
+#userlogin {
+	float: right;
+	overflow: hidden
+}
+
+#userlogin input:not([type='submit']) {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 2px #888888 inset;
+	height: 30px;
+	width: 130px;
+	margin: 0 10px;
+	
+	padding: 0 10px;
+}
+
+#userlogin input[type='submit'] {
+	width: 50px;
+	height: 25px;
+	color: #D83E3E;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+#logo {
+	height: 86px;
+	width: 300px;
+	float: left;
+	clear: left;
+}
+
+#logo a {
+	height: 86px;
+	width: 300px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin-top: 50px;
+}
+
+nav li {
+	float:right;
+	display: inline-block;
+	
+}
+
+nav a {
+	display: block;
+	width: 155px;
+	height:45px;
+	margin: 0 20px;
+	color: white;
+	background-color: #D83E3E;
+	text-align: center;
+	line-height: 45px;
+	font-size: 24px;
+	text-decoration: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+}
+
+nav a:hover {
+	background-color: #F80000;
+}
+
+#nav {
+	margin-right: -20px;
+}
+
+#page-wrap {
+	width: 960px;
+}
+
+#main-content {
+	width: 620px;
+	float: left;
+	margin-top: 80px;
+}
+
+#main-content p {
+	font-size: 15px;
+	line-height: 120%;
+	padding: 10px 0;
+	padding-left: 20px;
+	color: #606060;
+}
+
+#about-sidebar {
+	width: 280px;
+	float: right;
+	clear: right;
+	background-color: white;
+	margin: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#about-sidebar ul {
+	list-style-image: url(images/bullet.png);
+	font-size: 14px;
+	margin: 20px;
+	margin-left: 45px;
+}
+
+#about-sidebar li {
+	color: #606060;
+	margin-top: 20px;
+}
+
+footer {
+	background-color: #a0a0a0;
+	height: 100px;
+	margin-top: 50px;
+	clear: both;
+	float:left;
+	width: 100%;
+}
+
+.footernav {
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+
+
+.footernav li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.footernav li:not(:last-child) {
+	border-right: 2px solid #a8a8a8;
+}
+
+.footernav a {
+	display: block;
+	font-size: 18px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+}
+
+footer p {
+	text-align: center;
+	color: #FFF;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
