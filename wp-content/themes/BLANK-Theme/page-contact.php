@@ -13,7 +13,7 @@
 
  	<h1>Message Us!</h1>
 
- 	<form id='contact'>
+ 	<form id='contact' action=''>
  		<label for="con_name">Name</label>
 		<input type="text" id="con_name" />
 
