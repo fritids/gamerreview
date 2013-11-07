@@ -8,8 +8,6 @@
 	</footer>
 
 
-</body>
-
 	<?php wp_footer(); ?>
 	
 	<!-- Don't forget analytics -->

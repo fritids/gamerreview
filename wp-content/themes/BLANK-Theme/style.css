@@ -1,7 +1,7 @@
 /*   
 Theme Name: Gamerreview
 Theme URI: http://gamerreview.com
-Description: Theme designed solely for use on the Gamerreview websit.
+Description: Theme designed solely for use on the Gamerreview website.
 Author: David Walker
 Version: 1
 */
@@ -140,12 +140,20 @@ h2 {
 	margin: 20px;
 }
 
-#userlogin {
+#loginbox {
 	float: right;
-	overflow: hidden
 }
 
-#userlogin input:not([type='submit']) {
+#loginform input[type='submit'] {
+	width: 50px;
+	height: 25px;
+	color: #D83E3E;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+
+#loginform input:not([type='submit']) {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
@@ -154,17 +162,22 @@ h2 {
 	height: 30px;
 	width: 130px;
 	margin: 0 10px;
-	
 	padding: 0 10px;
 }
 
-#userlogin input[type='submit'] {
-	width: 50px;
-	height: 25px;
-	color: #D83E3E;
-	cursor: pointer;
-	box-shadow: none;
+#loginform input {
+	float: left;
 }
+
+
+#loginform label {
+	display: none;
+}
+
+#loginform p {
+	display: inline-block;
+}
+
 
 #logo {
 	height: 86px;
@@ -181,12 +194,12 @@ h2 {
 nav ul {
 	list-style-type: none;
 	margin-top: 50px;
+	clear: right;
 }
 
 nav li {
 	float:right;
 	display: inline-block;
-	
 }
 
 nav a {
@@ -239,7 +252,6 @@ nav a:hover {
 	box-shadow: 1px 1px 2px #888888 inset;
 	height: 25px;
 	width: 300px;
-	margin: 0 20px 20px;
 	padding: 0 10px;
 	display: block;
 }
@@ -247,7 +259,6 @@ nav a:hover {
 #main-content textarea {
 	height: 130px;
 	width: 580px;
-	margin: 0 20px 5px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -289,6 +300,11 @@ nav a:hover {
 	float: right;
 	margin-top: 10px;
 	font-size: 14px;
+}
+
+#contactform span {
+	margin: 10px 0;
+	display: inline-block;
 }
 
 #about-sidebar, #contact-sidebar {

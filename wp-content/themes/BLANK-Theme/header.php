@@ -45,19 +45,20 @@
 	<div id="page-wrap">
 
 		<header>
-			<form id='userlogin'>
-				<input type='text' name='username' placeholder='Username'>
-				<input type='password' name='password' placeholder='Password'>
-				<input type='submit' value='Login' class='subbtn'>
-			</form>
+			<div id='loginbox'>
+				<?php wp_login_form(); ?>
+			</div>
+
 			<div id='logo'>
 				<a href='/'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
 			</div>
+
 			<div id='nav'>
 				<nav>
 					<?php wp_nav_menu(array('menu' => 'Main Nav Menu' )); ?>
 				</nav>
 			</div>
+			
 		</header>
 		<div id='search'>
 			<?php get_search_form() ?>

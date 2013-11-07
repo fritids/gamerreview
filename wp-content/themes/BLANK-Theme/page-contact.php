@@ -13,19 +13,10 @@
 
  	<h1>Message Us!</h1>
 
- 	<form id='contact' action=''>
- 		<label for="con_name">Name</label>
-		<input type="text" id="con_name" />
+ 	<div id='contactform'>
 
-		<label for="email">Email Address</label>
-		<input type="text" id="email" />
-
-		<label for="message">Message</label>
-		<textarea rows='10' cols='75' type="text" id="message"></textarea>
-
-		<input type='submit' value='Send' class='subbtn'> 
-
- 	</form>
+ 		<?php echo do_shortcode( '[contact-form-7 id="21" title="Contact form 1"]' ); ?>
+ 	</div>
 
  </div>
 
