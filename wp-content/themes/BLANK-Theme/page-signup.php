@@ -14,7 +14,7 @@
  	<h1>Why Sign Up?</h1>
 	
 	<p id='signfirst'>
-		So by now you have seen some of our site and what we are about here. You should have plenty of reasons to sign up! If you still need some convincing, check out the reasons why you shoyld sign up here. The more the merrier here at Gamerreview!
+		So by now you have seen some of our site and what we are about here. You should have plenty of reasons to sign up! If you still need some convincing, check out the reasons why you should sign up here. The more the merrier here at Gamerreview!
 	</p>
 	<ul id='reasons'>
 		<li>Community full of gamers and writers to share your work with!</li>

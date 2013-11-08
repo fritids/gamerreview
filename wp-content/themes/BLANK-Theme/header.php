@@ -20,7 +20,7 @@
 		         wp_title(''); echo ' - '; }
 		      elseif (is_404()) {
 		         echo 'Not Found - '; }
-		      if (is_home()) {
+		      if (is_front_page()) {
 		         bloginfo('name'); echo ' - '; bloginfo('description'); }
 		      else {
 		          bloginfo('name'); }
