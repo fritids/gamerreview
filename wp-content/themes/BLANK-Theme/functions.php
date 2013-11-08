@@ -1,5 +1,5 @@
 <?php
-	
+
 	// Add RSS links to <head> section
 	automatic_feed_links();
 	
@@ -9,6 +9,15 @@
 	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
 	}
+
+    add_filter( 'wpmem_login_form', 'remove_wpmem_txt' );
+    add_filter( 'wpmem_register_form', 'remove_wpmem_txt' );
+   
+    function remove_wpmem_txt( $form ) {
+       $old = array( '[wpmem_txt]', '[/wpmem_txt]' );
+       $new = array( '', '' );
+       return str_replace( $old, $new, $form );
+    }
 	
 	// Clean up the <head>
 	function removeHeadLinks() {

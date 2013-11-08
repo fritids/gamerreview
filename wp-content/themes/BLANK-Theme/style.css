@@ -142,6 +142,7 @@ h2 {
 
 #loginbox {
 	float: right;
+	margin-bottom: 10px;
 }
 
 #loginform input[type='submit'] {
@@ -240,8 +241,7 @@ nav a:hover {
 #main-content p {
 	font-size: 15px;
 	line-height: 120%;
-	padding: 0 0 20px 0;
-	padding-left: 20px;
+	margin: 0 0 20px 20px;
 	color: #606060;
 }
 #main-content input:not([type='submit']) {
@@ -254,6 +254,7 @@ nav a:hover {
 	width: 300px;
 	padding: 0 10px;
 	display: block;
+	margin: 0 20px;
 }
 
 #main-content textarea {
@@ -267,6 +268,7 @@ nav a:hover {
 	resize: none;
 	text-align: left;
 	padding: 10px;
+	margin: 10px 20px;
 }
 
 #main-content label {
@@ -303,11 +305,31 @@ nav a:hover {
 }
 
 #contactform span {
-	margin: 10px 0;
+	margin: 10px 0 0;
 	display: inline-block;
 }
 
-#about-sidebar, #contact-sidebar {
+#contactform input:not([type=submit]), #contactform textarea {
+	margin: 0;
+}
+
+#wpcf7-f21-t1-o1 p {
+	font-size: 14px;
+}
+
+#reasons {
+	list-style-image: url(images/bullet.png);
+	font-size: 14px;
+	margin: 30px;
+	margin-left: 65px;
+}
+
+#reasons li {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#about-sidebar, #contact-sidebar, #signup-sidebar {
 	width: 280px;
 	float: right;
 	clear: right;
@@ -339,6 +361,74 @@ nav a:hover {
 	color: #606060;
 	font-weight: bold;
 	margin-top: 20px;
+}
+
+#wpmem_reg legend {
+	display: none;
+}
+
+
+#wpmem_reg label {
+	color: #606060;
+	margin: 10px 20px 5px;
+	font-size: 14px;
+	display: block;
+}
+
+#wpmem_reg label[for=username] {
+	margin-top: 0;
+}
+
+#wpmem_reg input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 2px #888888 inset;
+	height: 25px;
+	width: 220px;
+	padding: 0 10px;
+	margin: 0 20px;
+	display: inline-block;
+}
+
+ #wpmem_reg input[type='reset'] {
+	display: none;
+}
+
+#wpmem_reg input[type='submit'] {
+	width: 100px;
+	height: 30px;
+	color: #D83E3E;
+	cursor: pointer;
+	box-shadow: none;
+	-moz-border-radius: 6px;
+	-moz-box-shadow: #bdbdbd 0px 0px 5px; 
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: #6E7849 0 0 10px;
+	background-color: #ffffff;
+	background-image: -moz-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -ms-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -o-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -webkit-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: linear-gradient(1deg, #d6d6d6, #ffffff);
+	border-radius: 6px;
+	border: 1px solid #cfcfcf;
+	box-shadow: #bdbdbd 0px 0px 5px;
+	color: #d83e3e;
+	display: inline-block;
+	text-decoration: none;
+	margin: 20px 20px;
+	font-size: 14px;
+	float: right;
+}
+
+.req-text {
+	margin: 10px 20px;
+}
+
+#wpmem_login {
+	display: none;
 }
 
 footer {

@@ -50,7 +50,7 @@
 			</div>
 
 			<div id='logo'>
-				<a href='/'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
+				<a href='<?php echo site_url(); ?>'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
 			</div>
 
 			<div id='nav'>
