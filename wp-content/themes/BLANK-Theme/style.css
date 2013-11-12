@@ -140,7 +140,7 @@ h2 {
 	margin: 20px;
 }
 
-#loginbox {
+#loginform {
 	float: right;
 	margin-bottom: 10px;
 }
@@ -180,16 +180,11 @@ h2 {
 }
 
 
-#logo {
+header img {
 	height: 86px;
 	width: 300px;
 	float: left;
 	clear: left;
-}
-
-#logo a {
-	height: 86px;
-	width: 300px;
 }
 
 nav ul {
@@ -224,7 +219,7 @@ nav a:hover {
 	background-color: #F80000;
 }
 
-#nav {
+nav {
 	margin-right: -20px;
 }
 
@@ -262,7 +257,7 @@ nav a:hover {
 	float: left;
 }
 
-#signuplink {
+#signcontent a {
 	color: #D83E3E;
 	font-size: 20px;
 	text-align: center;
@@ -355,14 +350,14 @@ nav a:hover {
 	font-size: 14px;
 }
 
-#reasons, #benefits {
+#reasons, #signcontent ul {
 	list-style-image: url(images/bullet.png);
 	font-size: 14px;
 	margin: 30px;
 	margin-left: 65px;
 }
 
-#reasons li, #benefits li {
+#reasons li, #signcontent li {
 	font-weight: bold;
 	margin-top: 10px;
 }

@@ -21,12 +21,12 @@
 
  		<p>Sign up and become a member today! You will get exclusive, members only benefits. Click the link below to sign up now!</p>
 
- 		<ul id='benefits'>
+ 		<ul>
  			<li>Create your own profile for others to view!</li>
  			<li> Post reviews to get your views on games out into the world!</li>
  		</ul>
 
- 		<a id='signuplink' href="?page_id=10">Sign Up!</a>
+ 		<a href="?page_id=10">Sign Up!</a>
 
  	</div>
  </div>

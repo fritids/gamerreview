@@ -45,24 +45,18 @@
 	<div id="page-wrap">
 
 		<header>
-			<div id='loginbox'>
-				<?php wp_login_form(); ?>
-			</div>
+			<?php wp_login_form(); ?>
 
-			<div id='logo'>
-				<a href='<?php echo site_url(); ?>'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
-			</div>
+			<a href='<?php echo site_url(); ?>'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
 
-			<div id='nav'>
-				<nav>
-					<?php wp_nav_menu(array('menu' => 'Main Nav Menu' )); ?>
-				</nav>
-			</div>
+
+			<nav>
+				<?php wp_nav_menu(array('menu' => 'Main Nav Menu' )); ?>
+			</nav>
 			
 		</header>
-		<div id='search'>
+			
 			<?php get_search_form() ?>
-		</div>
 
 
 
