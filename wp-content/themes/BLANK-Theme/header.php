@@ -41,13 +41,33 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- START JAVASCRIPT SDK CODE FOR FACEBOOK FEED -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- END FACEBOOK FEED CODE -->
 	
 	<div id="page-wrap">
 
 		<header>
-			<?php wp_login_form(); ?>
 
-			<a href='<?php echo site_url(); ?>'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a>
+
+			<?php 
+
+			if ( is_user_logged_in() ) {
+
+				echo "<p id='createpost'><a href='"; echo site_url('?page_id=37'); echo "'><img src='wp-content/themes/BLANK-Theme/images/pen.png' alt='Pen for create post link.' height='20' width='20' />Create Post</a></p> <p id='dash'> - </p>  <p id='editlink'><a href='"; echo site_url('?page_id=34'); echo "' title='Edit Profile'>Edit Profile</a></p>";
+
+			} else { wp_login_form(); }?>
+
+			<h1><a href='<?php echo site_url(); ?>'><img src='wp-content/themes/BLANK-Theme/images/GRHead.png' alt='Gamerreview' height='86' width='300' /></a></h1>
 
 
 			<nav>

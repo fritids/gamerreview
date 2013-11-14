@@ -180,11 +180,41 @@ h2 {
 }
 
 
-header img {
+header h1 img {
 	height: 86px;
 	width: 300px;
 	float: left;
 	clear: left;
+}
+
+#createpost, #editlink {
+	font-size: 14px;
+	color: #D83E3E;
+	float: right;
+	margin-bottom: 10px;
+	display: block;
+}
+
+#logoutlink {
+	display: block;
+}
+
+#createpost img {
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+#createpost a, #editlink a {
+	color: #D83E3E;
+	font-weight: bold;
+}
+
+#dash {
+	float: right;
+	color: #606060;
+	font-size: 14px;
+	margin:0 5px;
 }
 
 nav ul {
@@ -262,7 +292,23 @@ nav {
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
+}
+
+#signlink {
 	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#twitter-widget-0 {
+	margin-top: 20px;
+	width: 450px;
+}
+
+.fb-like-box {
+	float: right;
+	margin-top: 20px;
+	background-color: white;
 }
 
 #main-content {
@@ -310,7 +356,7 @@ nav {
 	font-size: 14px;
 }
 
-#main-content input[type='submit'] {
+#main-content input[type='submit'], #create-content input[type='submit'] {
 	width: 100px;
 	height: 30px;
 	color: #D83E3E;
@@ -337,7 +383,76 @@ nav {
 	font-size: 14px;
 }
 
-#contactform span {
+#create-content {
+	margin-top: 80px;
+}
+
+#create-content label {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+#create-content input:not([type='submit']) {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 2px #888888 inset;
+	height: 25px;
+	width: 300px;
+	padding: 0 10px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+#create-content input[type='submit'] {
+	margin: 0 auto;
+	display: block;
+	float: none;
+}
+
+#user-submitted-posts {
+	margin-left: 20px;
+}
+
+.usp-category {
+	display: none;
+}
+
+#wp-uspContent-editor-container {
+	margin-bottom: 20px;
+}
+
+#usp_add-another, #wp-uspContent-media-buttons, #wp-uspContent-editor-tools {
+	display: none;
+}
+
+#usp-upload-message {
+	margin: 10px 0;
+	color: #D83E3E;
+}
+
+#usp-success-message {
+	color: #606060;
+	font-size: 14px;
+}
+
+#usp-error-message {
+	color: red;
+}
+
+.usp-input-error {
+	color: red;
+}
+
+#create-content input[type='file'] {
+	border: none;
+	box-shadow: none;
+	padding-left: 0;
+}
+
+.wpcf7-form-control-wrap {
 	margin: 10px 0 0;
 	display: inline-block;
 }
@@ -348,6 +463,77 @@ nav {
 
 #wpcf7-f21-t1-o1 p {
 	font-size: 14px;
+}
+
+#edituser input:not([type='submit']), #edituser textarea {
+	margin-top: 10px;
+	margin-left: 0;
+}
+
+#your-profile {
+	display: inline-block;
+	float: left;
+	margin: 20px;
+}
+
+#your-profile h3 {
+	display: block;
+	font-size: 20px;
+}
+
+#your-profile label {
+	display: none;
+}
+
+#your-profile input {
+	display: inline-block;
+}
+
+#your-profile input[type='submit'] {
+	width: 100px;
+	height: 25px;
+	color: #D83E3E;
+	cursor: pointer;
+	box-shadow: none;
+	-moz-border-radius: 6px;
+	-moz-box-shadow: #bdbdbd 0px 0px 5px; 
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: #6E7849 0 0 10px;
+	background-color: #ffffff;
+	background-image: -moz-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -ms-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -o-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: -webkit-linear-gradient(1deg, #d6d6d6, #ffffff);
+	background-image: linear-gradient(1deg, #d6d6d6, #ffffff);
+	border-radius: 6px;
+	border: 1px solid #cfcfcf;
+	box-shadow: #bdbdbd 0px 0px 5px;
+	color: #d83e3e;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+#your-profile p {
+	font-size: 12px;
+	color: #606060;
+	margin: 10px 0;
+	display: block;
+}
+
+#your-profile span {
+	margin: 10px 0;
+	display: inline-block;
+}
+
+#simple-local-avatar-photo {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+#editprofile-sidebar #simple-local-avatar-remove {
+	display: none;
 }
 
 #reasons, #signcontent ul {
@@ -362,7 +548,12 @@ nav {
 	margin-top: 10px;
 }
 
-#about-sidebar, #contact-sidebar, #signup-sidebar, #home-sidebar {
+.nameHeader, .contactInfoHeader, .aboutYourselfHeader {
+	display: none;
+}
+
+
+#about-sidebar, #contact-sidebar, #signup-sidebar, #home-sidebar, #editprofile-sidebar {
 	width: 280px;
 	float: right;
 	clear: right;
@@ -417,6 +608,35 @@ nav {
 	color: #606060;
 	font-weight: bold;
 	margin-top: 20px;
+}
+
+ #signup-sidebar ul {
+ 	margin: 10px auto;
+ 	display: block;
+ 	text-align: center;
+ }
+
+ #signup-sidebar li {
+ 	margin: 10px auto;
+ 	color: #d83e3e;
+ }
+
+ #signup-sidebar a {
+ 	color: #D83E3E;
+ }
+
+#signup-sidebar p {
+	text-align: center;
+	color: #606060;
+	font-size: 14px;
+
+}
+
+#loginmessage {
+	margin: 20px;
+	font-size: 14px;
+	color: #D83E3E;
+	text-align: center;
 }
 
 #wpmem_reg legend {
