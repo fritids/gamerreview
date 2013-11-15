@@ -26,6 +26,47 @@
     }
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
+
+    // Change Excerpt Length
+
+    function custom_excerpt_length( $length ) {
+    return 100;
+    }
+    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+    // Change excerpt more filter
+
+    function new_excerpt_more( $more ) {
+    return '...';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+
+    //get recent articles
+    function get_related_author_posts() {
+      global $authordata, $post;
+   
+      $authors_posts = get_posts( array( 'author' => $authordata->ID, 'post__not_in' => array( $post->ID ), 'posts_per_page' => 2 ) );
+   
+      $output = '<ul>';
+      foreach ( $authors_posts as $authors_post ) {
+          $output .= '<li>';
+          $output .= '<h3>' . apply_filters( 'the_title', $authors_post->post_title, $authors_post->ID ) . '</h3>';
+          $output .= '<p>' . get_the_excerpt() . '</p>';
+          $output .= '<p><a href="' . get_permalink( $authors_post->ID ) . '">Read More</a></p></li>';
+          $output .= '</li>';
+      }
+      $output .= '</ul>';
+   
+      return $output;
+  }
+
+  //Redirect to home on log in
+   add_action('wp_logout','go_home');
+    function go_home(){
+    wp_redirect( home_url() );
+    exit();
+  }
+
     
 	// Declare sidebar widget zone
     if (function_exists('register_sidebar')) {

@@ -20,7 +20,15 @@
 				<h2>Archive for <?php the_time('Y'); ?></h2>
 
 			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-				<h2>Author Archive</h2>
+				<?php 
+					$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+				?>
+				<div id='author-sidebar'>
+					<?php echo get_avatar( $curauth->ID, $size = '120' ); ?>
+					<h4><?php echo $curauth->first_name;?> <?php echo $curauth->last_name;?></h4>
+					<h4 id='bio'>Bio</h4>
+					<p><?php echo $curauth->description;?></p>
+				</div>
 
 			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 				<h2>Blog Archives</h2>
@@ -29,17 +37,21 @@
 
 			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
+
 			<?php while (have_posts()) : the_post(); ?>
 			
 				<div <?php post_class() ?>>
-				
-					<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
+					<h2 id="post-header"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+				<div id="excerpt">
 					<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
 					<div class="entry">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
+
+						<p><a href="<?php the_permalink() ?>">Read More</a></p>
 					</div>
+
+				</div>
 
 				</div>
 

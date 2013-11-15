@@ -91,6 +91,10 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+strong {
+	font-weight: bold;
+}
+
 header {
 	padding: 20px 20px 10px;
 	background: white;
@@ -275,11 +279,7 @@ nav {
 }
 
 #slideshow {
-	width: 920px;
-	text-align: center;
-	height: 400px;
 	border: 3px solid #D83E3E;
-	margin: 0 auto;
 }
 
 #signcontent {
@@ -303,6 +303,7 @@ nav {
 #twitter-widget-0 {
 	margin-top: 20px;
 	width: 450px;
+	height: 400px;
 }
 
 .fb-like-box {
@@ -553,7 +554,7 @@ nav {
 }
 
 
-#about-sidebar, #contact-sidebar, #signup-sidebar, #home-sidebar, #editprofile-sidebar {
+#about-sidebar, #contact-sidebar, #signup-sidebar, #home-sidebar, #editprofile-sidebar, #single-sidebar, #author-sidebar {
 	width: 280px;
 	float: right;
 	clear: right;
@@ -562,6 +563,41 @@ nav {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+}
+
+#author-sidebar {
+	width: 280px;
+	float: left;
+	clear: left;
+	background-color: white;
+	margin: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin-top: 80px;
+}
+
+#author-sidebar p {
+	margin:10px 20px;
+	color: #606060;
+	font-style: italic;
+}
+
+.avatar {
+	display: block;
+	margin: 20px auto;
+}
+h4 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #606060;
+	text-align: center;
+	margin: 20px;
+}
+
+#bio {
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 #home-sidebar h2 {
@@ -630,6 +666,24 @@ nav {
 	color: #606060;
 	font-size: 14px;
 
+}
+
+#single-sidebar h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+#single-sidebar ul {
+	margin: 20px;
+}
+
+#single-sidebar p {
+		margin-bottom: 10px;
+}
+
+#single-sidebar a {
+	color: #D83E3E;
+	margin: 10px 0;
 }
 
 #loginmessage {
@@ -707,9 +761,103 @@ nav {
 	display: none;
 }
 
+#mask {
+	width: 600px;
+	height: 300px;
+	overflow: hidden;
+	display: block;
+	margin: 10px auto;
+}
+
+#result #mask {
+	width: 280px;
+	height: 200px;
+	float: left;
+	margin-left: 20px;
+}
+
+#result img {
+	width: 100%;
+	margin-top: 0;
+}
+
+#result p {
+	float: right;
+	clear: right;
+	margin: 0 20px 20px;
+	width: 620px;
+	font-size: 14px;
+}
+
+#result a {
+	color: #D83E3E;
+}
+
+#post {
+	width: 620px;
+	float: left;
+}
+
+#post h1 {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+#results {
+	margin-top: 80px;
+}
+
+#resultpost {
+	clear: both;
+}
+
+.entry {
+	margin: 20px;
+	font-size: 14px;
+}
+
+.meta {
+	color: #606060;
+	margin: 20px;
+}
+
+#excerpt .meta {
+	display: none;
+}
+
+.entry img {
+	width: 100%;
+}
+
+.entry p {
+	margin-bottom: 20px;
+	color: #303030;
+	line-height: 160%;
+}
+
+.entry a {
+	font-size: 12px;
+	color: #D83E3E;
+}
+
+.post-edit-link, .comments-link {
+	display: none;
+}
+
+.archive .post {
+	float: right;
+	width: 620px;
+	clear: right;
+}
+
+#post-header a {
+	text-decoration: none;
+	color: black;
+}
+
 footer {
 	background-color: #a0a0a0;
-	height: 100px;
+	height: 120px;
 	margin-top: 50px;
 	clear: both;
 	float:left;
@@ -720,6 +868,7 @@ footer {
 	padding: 20px 0;
 	width: 100%;
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 
@@ -738,6 +887,10 @@ footer {
 	color: #FFF;
 	text-align: center;
 	text-decoration: none;
+}
+
+footer a {
+	color: #FFF;
 }
 
 footer p {

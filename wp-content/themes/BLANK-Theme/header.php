@@ -31,7 +31,7 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 	
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<link rel="stylesheet" href="wp-content/themes/BLANK-Theme/style.css">
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 

@@ -1,14 +1,21 @@
 <?php get_header(); ?>
+	
+
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<div <?php post_class() ?> id="post">
 			
-			<h2><?php the_title(); ?></h2>
+			<h1><?php the_title(); ?></h1>
 			
 			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
 			<div class="entry">
+			<div id='mask'>
+				<?php if (function_exists('usp_post_attachments')) {
+					usp_post_attachments('full', '<img src="', '" alt="" />', 99);
+				} ?>
+			</div>
 				
 				<?php the_content(); ?>
 
@@ -21,8 +28,9 @@
 			<?php edit_post_link('Edit this entry','','.'); ?>
 			
 		</div>
-
-	<?php comments_template(); ?>
+		<div id='single-sidebar'>
+				<?php echo get_related_author_posts(); ?>
+		</div>
 
 	<?php endwhile; endif; ?>
 	

@@ -2,20 +2,26 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2>Search Results</h2>
+		<h1 id='results'>Results</h1>
 
 		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
 		<?php while (have_posts()) : the_post(); ?>
-
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<?php if (is_search() && ($post->post_type=='page')) continue; ?>
+			<div <?php post_class() ?> id="resultpost">
 
 				<h2><?php the_title(); ?></h2>
 
 				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-				<div class="entry">
+				<div id="result">
+					<div id='mask'>
+						<?php if (function_exists('usp_post_attachments')) {
+						usp_post_attachments('full', '<img src="', '" alt="" />', 99);
+						} ?>
+					</div>
 					<?php the_excerpt(); ?>
+					<p><a href="<?php the_permalink() ?>">Read More</a></p>
 				</div>
 
 			</div>

@@ -91,7 +91,7 @@ if (isset($authorName)) {
 		<?php } if ($usp_options['usp_images'] == 'show') { ?>
 		<?php if ($usp_options['max-images'] !== 0) { ?>
 		<fieldset class="usp-images">
-			<label for="user-submitted-image"><?php _e('Upload an Image to use as Featured Image.', 'usp'); ?></label>
+			<label for="user-submitted-image"><?php _e('Upload an Image to use as Featured Image (900 x 400 recommended)', 'usp'); ?></label>
 			<div id="usp-upload-message"><?php echo $usp_options['upload-message']; ?></div>
 			<div id="user-submitted-image">
 				<?php if($usp_options['min-images'] < 1) {
