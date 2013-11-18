@@ -811,6 +811,18 @@ h4 {
 	clear: both;
 }
 
+#archivepost {
+	width: 100%;
+}
+
+#archivepost #excerpt .meta {
+	display: block;
+}
+
+#tagged {
+	margin-top: 80px;
+}
+
 .entry {
 	margin: 20px;
 	font-size: 14px;

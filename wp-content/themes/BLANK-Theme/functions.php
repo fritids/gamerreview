@@ -41,6 +41,24 @@
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 
+    //custom excerpt for use in next function
+    function get_excerpt_by_id($post_id){
+    $the_post = get_post($post_id); //Gets post ID
+    $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt
+    $excerpt_length = 100; //Sets excerpt length by word count
+    $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images
+    $words = explode(' ', $the_excerpt, $excerpt_length + 1);
+    if(count($words) > $excerpt_length) :
+    array_pop($words);
+    array_push($words, '…');
+    $the_excerpt = implode(' ', $words);
+    endif;
+    $the_excerpt = '<p>' . $the_excerpt . '</p>';
+    return $the_excerpt;
+    }
+
+
+
     //get recent articles
     function get_related_author_posts() {
       global $authordata, $post;
@@ -49,9 +67,10 @@
    
       $output = '<ul>';
       foreach ( $authors_posts as $authors_post ) {
+          $my_excerpt = get_excerpt_by_id($authors_post->ID);
           $output .= '<li>';
           $output .= '<h3>' . apply_filters( 'the_title', $authors_post->post_title, $authors_post->ID ) . '</h3>';
-          $output .= '<p>' . get_the_excerpt() . '</p>';
+          $output .= '<p>' . $my_excerpt . '</p>';
           $output .= '<p><a href="' . get_permalink( $authors_post->ID ) . '">Read More</a></p></li>';
           $output .= '</li>';
       }
